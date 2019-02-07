@@ -69,7 +69,7 @@ h2 {
   text-align: center;
   margin-top: 30px;
   padding: 30px 0 0 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #662e1b;
   font-weight: bold;
 }
@@ -201,18 +201,6 @@ p{
 .img-left-footer {
   width: 30px;
 }
-.right-footer {
-  text-align: right;
-  padding: 0px 15px;
-  width: 50%;
-  float: left;
-  position: absolute;
-  bottom: 0px;
-  right: 1px;
-}
-.img-right-footer {
-  width: 40%;
-}
 .section-skills {
   display: table;
   max-width: 1000px;
@@ -226,6 +214,7 @@ p{
   text-align: center;
   width: 50%;
   float: left;
+  padding: 0px 0px 0px 5%;
 }
 .left-skills h2 {
   height: 60px;
@@ -270,8 +259,5 @@ p{
   }
   .content-img-first {
     padding-bottom: 0px;
-  }
-  .img-right-footer {
-    width: 50%;
   }
 }
