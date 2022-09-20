@@ -1,13 +1,23 @@
-import Head from 'next/head'
+import { urls } from '../utils/constants';
 
-export default function Home() {
+export default function Home(props) {
+  const { name } = props.data;
+
   return (
     <>
-      <Head>
-        <title>Juan F. Larrotta Bernal</title>
-        <meta name="description" content="Portafolio de Juan F. Larrotta Bernal" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <h1>{name}</h1>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  let data = null;
+  try {
+    const res = await fetch(urls.apiData)
+    data = await res.json()
+  } catch (error) {
+    console.log('Data fetching error');
+    console.log(error);
+  }
+  return { props: { data } }
 }
