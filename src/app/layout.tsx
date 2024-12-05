@@ -1,21 +1,18 @@
+import { Montserrat } from "next/font/google";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import "@/styles/globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+export const montserrat = Montserrat({
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--montserrat-font",
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Juan Larrotta",
-  description: "Portfolio Juan Larrotta NextJs",
+  title: "Portfolio Juan F. Larrotta Bernal",
+  description: "Portfolio of Juan Fernando Larrotta Bernal made in NextJS",
 };
 
 export default function RootLayout({
@@ -25,11 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${montserrat.variable} bg-background`}>{children}</body>
     </html>
   );
 }
