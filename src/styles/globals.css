@@ -5,3 +5,23 @@
 body {
   font-family: var(--montserrat-font);
 }
+
+.photo {
+  position: fixed;
+  opacity: 0.15;
+  width: 100vw;
+  height: 60dvh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: drop-shadow(5px 5px 10px #2a2a2a);
+  background: #2a2a2a;
+  border-radius: 20% 0 20% 0%;
+  z-index: -1;
+}
+
+.title {
+  filter: drop-shadow(5px 5px 40px #2a2a2a);
+  text-shadow: 2px 2px 0px #e59d40;
+  color: #e59d40;
+}

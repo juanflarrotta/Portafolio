@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   // distDir: 'build',
   // trailingSlash: true,
-    assetPrefix: 'https://juanflarrotta.github.io/Portafolio/'
+    // assetPrefix: 'https://juanflarrotta.github.io/Portafolio/'
     // staticPageGenerationTimeout: 1000,
     // reactStrictMode: false
 };
